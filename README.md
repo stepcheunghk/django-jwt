@@ -38,6 +38,9 @@ A quick and simple example to implementing JWT to secure your backend Django API
     ]
 
 ### 4. Edit views.py to protect your backend API
+
+Add "permission_classes = (IsAuthenticated,)" to the view you want to protect
+
     from rest_framework.permissions import IsAuthenticated
 
     class HelloView(APIView):
