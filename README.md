@@ -26,16 +26,19 @@ A quick and simple example to implementing JWT to secure your backend Django API
 ### 3. Edit urls.py
     from rest_framework_simplejwt.views import (
         TokenObtainPairView,
-        TokenRefreshView,
     )
 
     urlpatterns = [
         ...
         path('hello/', views.HelloView.as_view(), name='hello'), ## Sample API for JWT Example
         path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-        path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
         ...
     ]
+
+There are two URLs in this example.
+
+'hello/': sample API
+'api/token/': API to get the JWT token
 
 ### 4. Edit views.py to protect your backend API
 
