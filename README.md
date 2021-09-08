@@ -49,7 +49,9 @@ A quick and simple example to implementing JWT to secure your backend Django API
 ### 5. Verify that JWT is working properly
     curl http://YourBackendAPI/hello/
 
-It should return error message. For example, {"detail":"Authentication credentials were not provided."}
+Because it did not carry the JWT token to make the API call, it should return error message. For example,
+
+> {"detail":"Authentication credentials were not provided."}
 
 In order to make backend API calls, we should obtain the token first.
 
@@ -69,4 +71,6 @@ We use "access" token to access our API.
     -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxOTg3NTEzLCJqdGkiOiJiM2Q2NzNjNWNiNmY0NWM2YWQ5NzljM2ZlM2ZmZTRhNSIsInVzZXJfaWQiOjExNn0.IZTuRwoU36IxavkheNUH7N1NX9zxA6kloAxD4hTPCNU" \
     http://YourBackendAPI/hello/
 
-It should return success message. For example, {"message":"Hello, World!"}
+It should return success message. For example,
+
+> {"message":"Hello, World!"}
