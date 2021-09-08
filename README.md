@@ -37,7 +37,7 @@ A quick and simple example to implementing JWT to secure your backend Django API
 
 There are two URLs in this example.
 
-'hello/': sample API
+'hello/': sample API <br/>
 'api/token/': API to get the JWT token
 
 ### 4. Edit views.py to protect your backend API
