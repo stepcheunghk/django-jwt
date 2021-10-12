@@ -3,6 +3,14 @@
 ## Introduction
 A quick and simple example to implementing JWT to secure your backend Django API
 
+## Sequence Diagram - Authentication
+```mermaid
+sequenceDiagram
+    User->>+Backend API: 1. Ask Backend API for JWT Token by entering Username and Password
+    Backend API->>+User: 2. Return JWT Token to user if login succeeded
+    User->>+Backend API: 3. Make your desired API calls with JWT token in HTTP header
+```
+
 ### 1. Installation
 #### Rest Framework SimpleJWT
 `$ pip install djangorestframework-simplejwt`
